@@ -1,0 +1,26 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+        name = <Enter your name Here>
+        email = <Enter your email Here>
+
+[core]
+  editor = code --wait
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+
+[alias]
+        br = branch
+        cm = commit
+        st = status
+        tree = log --graph --decorate --pretty=oneline --abbrev-commit
+        last = log -1 HEAD --stat
+        ll = log --oneline
+        p = push
+        se = !git rev-list --all | xargs git grep -F
